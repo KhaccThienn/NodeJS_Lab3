@@ -1,0 +1,18 @@
+<%- include ('layouts/header.ejs') %>
+<div class="container">
+  <div class="row">
+    <% products.forEach((items, index) => { %>
+    <div class="card col-lg-3" style="width: 18rem">
+      <img src="<%= items.image %> " class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%= items.name %></h5>
+        <p class="card-text">
+          <%= items.price %> 
+        </p>
+        <a href="/product/<%= items.id %>" class="btn btn-primary">view Detail</a>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include ('layouts/footer.ejs') %>
